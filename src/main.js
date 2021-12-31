@@ -3,11 +3,14 @@ import * as Vec2d from "./vec2d.js"
 import * as Rect from "./rect.js"
 import * as Canvas from "./canvas.js"
 import * as Color from "./color.js"
+import * as TestImage from "./testimage.js"
 
 const upperLeft = Vec2d.origin
-const lowerRight = Window.getDims()
+//const lowerRight = Window.getDims()
+const lowerRight = Vec2d.create(100, 100)
 const rect = Rect.create(upperLeft, lowerRight)
 const canvas = Canvas.create(rect)
-canvas.fill(Color.green)
+canvas.fill(Color.black)
 
-canvas.setPixel(Vec2d.origin, Color.red)
+console.log("Right before testimage draw.")
+TestImage.draw(canvas)

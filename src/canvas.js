@@ -28,8 +28,7 @@ const create = (rect, name = "canvas") => {
     return {
         fill: (color) => fillContext(context)(color)(rect.getLowerRight()),
         setPixel: (vec2d, color) => setOnePixel(context)(color)(vec2d),
-        getWidth: () => rect.getLowerRight().getX(),
-        getHeight: () => rect.getLowerRight().getY()
+        getDim: () => rect.getLowerRight()
     }
 }
 
